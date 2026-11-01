@@ -193,12 +193,12 @@ select {
 }
 .select select option {
   background-color: #f0f5ff;
-  color: #173a63; /* text ka color */
+  color: #173a63;
 }
 
 .select select option:checked,
 .select select option:hover {
-  background-color: #3d8fe0; /* selected/hover color */
+  background-color: #3d8fe0;
   color: #ffffff;
 }
 .chev {
@@ -442,7 +442,7 @@ select {
   margin-bottom: 0;
 }
 
-/* ===== Header / Nav ===== */
+/* Header  */
 .site-header {
   position: sticky;
   top: 0;
@@ -565,23 +565,22 @@ select {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* ===== Footer ===== */
+/*  Footer*/
 
 :root {
-  --footer-pad-y: 40px; /* footer ki upar/neeche padding */
-  --footer-gap: 32px; /* columns ke beech gap */
+  --footer-pad-y: 40px;
+  --footer-gap: 32px;
 }
 
 .page {
   padding-bottom: 40px;
-} /* footer se pehle ka gap yahan se */
+}
 
 .site-footer {
   background: #12304f;
   color: #fff;
-  margin-top: 0; /* gap .page ki padding se aata hai */
+  margin-top: 0;
   padding-top: 1rem;
-  /* padding: var(--footer-pad-y) var(--side) 0; */
 }
 .footer-inner {
   max-width: 1100px;

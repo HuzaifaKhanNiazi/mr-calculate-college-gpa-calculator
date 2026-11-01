@@ -401,7 +401,6 @@
   padding: 24px 0 56px;
 }
 
-/* Bada 404: upar navy, neeche fade ho jata hai */
 .nf-visual {
   position: relative;
   display: grid;
@@ -547,9 +546,8 @@
 .about-page a:hover {
   text-decoration: underline;
 }
-/* ===== About page: responsive ===== */
+/*About page */
 
-/* Bade monitor (1400px se upar) */
 @media (min-width: 1400px) {
   .about-page {
     max-width: 780px;
@@ -565,14 +563,12 @@
   }
 }
 
-/* Laptop aur chhota desktop (1100px tak) */
 @media (max-width: 1100px) {
   .about-page {
     max-width: 680px;
   }
 }
 
-/* Tablet aur iPad (900px tak) */
 @media (max-width: 900px) {
   .about-page {
     max-width: 640px;
@@ -588,7 +584,6 @@
   }
 }
 
-/* Bade phone aur chhota tablet (760px tak) */
 @media (max-width: 760px) {
   .about-page {
     max-width: 100%;
@@ -599,7 +594,6 @@
   }
 }
 
-/* Phone (560px tak) */
 @media (max-width: 560px) {
   .about-page {
     padding: 20px;
@@ -617,7 +611,6 @@
   }
 }
 
-/* Chhota phone (380px tak, jaise iPhone SE) */
 @media (max-width: 380px) {
   .about-page h1 {
     font-size: 1.45rem;
@@ -628,7 +621,6 @@
   }
 }
 
-/* Phone landscape (kam height) */
 @media (max-height: 480px) and (orientation: landscape) {
   .about-page {
     max-width: 640px;
