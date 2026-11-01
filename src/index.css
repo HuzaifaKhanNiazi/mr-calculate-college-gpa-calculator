@@ -449,8 +449,11 @@ select {
   z-index: 50;
   background: rgba(18, 48, 79, 0.96);
   backdrop-filter: blur(8px);
-
+  transition: transform 0.3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.site-header.hide {
+  transform: translateY(-100%);
 }
 .nav-inner {
   max-width: 1100px;
@@ -713,6 +716,9 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
   .bar-fill {
+    transition: none;
+  }
+  .site-header {
     transition: none;
   }
 }

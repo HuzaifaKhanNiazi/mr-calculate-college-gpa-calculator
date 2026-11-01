@@ -388,6 +388,280 @@
 .faqs-page .faq-item p {
   padding: 0 20px 20px;
 }
+
+/* ===== 404 page ===== */
+.nf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 5px;
+  text-align: center;
+  padding: 24px 0 56px;
+}
+
+/* Bada 404: upar navy, neeche fade ho jata hai */
+.nf-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 8px 0 0;
+}
+.nf-num {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(7rem, 27vw, 17rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  background: linear-gradient(
+    180deg,
+    #173a63 0%,
+    #5f86b0 42%,
+    rgba(220, 235, 255, 0) 88%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+
+/* Badal (clouds) */
+.nf-visual::before,
+.nf-visual::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -18%;
+  width: 110%;
+  height: 62%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  filter: blur(14px);
+  background:
+    radial-gradient(
+      ellipse 22% 40% at 14% 62%,
+      #fff 0,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      ellipse 20% 46% at 34% 48%,
+      #fff 0,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      ellipse 24% 50% at 56% 58%,
+      #fff 0,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      ellipse 20% 42% at 78% 50%,
+      #fff 0,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      ellipse 22% 38% at 92% 64%,
+      #fff 0,
+      rgba(255, 255, 255, 0) 70%
+    );
+}
+.nf-visual::after {
+  bottom: -30%;
+  height: 50%;
+  opacity: 0.9;
+  filter: blur(22px);
+  background: radial-gradient(
+    ellipse 60% 70% at 50% 60%,
+    #f0f5ff 30%,
+    rgba(240, 245, 255, 0) 75%
+  );
+}
+
+.nf h1 {
+  position: relative;
+  z-index: 3;
+  margin-top: -12px;
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: var(--navy);
+}
+.nf p {
+  position: relative;
+  z-index: 3;
+  max-width: 460px;
+  margin: 14px auto 0;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.nf-actions {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.btn-dark {
+  background: var(--navy);
+  color: #fff;
+  border: 1px solid var(--navy);
+  box-shadow: 0 8px 20px rgba(23, 58, 99, 0.25);
+}
+.btn-dark:hover {
+  background: #12304f;
+}
+
+/* ===== About page ===== */
+.about-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 0 16px;
+}
+.about-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.about-page p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.about-page strong {
+  color: var(--navy);
+}
+.about-page a {
+  color: #3d8fe0;
+  font-weight: 600;
+  text-decoration: none;
+}
+.about-page a:hover {
+  text-decoration: underline;
+}
+/* ===== About page: responsive ===== */
+
+/* Bade monitor (1400px se upar) */
+@media (min-width: 1400px) {
+  .about-page {
+    max-width: 780px;
+    padding-top: 40px;
+  }
+  .about-page h1 {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+  }
+  .about-page p {
+    font-size: 1.12rem;
+    line-height: 1.8;
+  }
+}
+
+/* Laptop aur chhota desktop (1100px tak) */
+@media (max-width: 1100px) {
+  .about-page {
+    max-width: 680px;
+  }
+}
+
+/* Tablet aur iPad (900px tak) */
+@media (max-width: 900px) {
+  .about-page {
+    max-width: 640px;
+    padding: 20px 0 12px;
+  }
+  .about-page h1 {
+    font-size: 2.1rem;
+    margin-bottom: 18px;
+  }
+  .about-page p {
+    font-size: 1.03rem;
+    line-height: 1.72;
+  }
+}
+
+/* Bade phone aur chhota tablet (760px tak) */
+@media (max-width: 760px) {
+  .about-page {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .about-page h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Phone (560px tak) */
+@media (max-width: 560px) {
+  .about-page {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .about-page h1 {
+    font-size: 1.65rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+  }
+  .about-page p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+}
+
+/* Chhota phone (380px tak, jaise iPhone SE) */
+@media (max-width: 380px) {
+  .about-page h1 {
+    font-size: 1.45rem;
+  }
+  .about-page p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
+
+/* Phone landscape (kam height) */
+@media (max-height: 480px) and (orientation: landscape) {
+  .about-page {
+    max-width: 640px;
+    padding-top: 8px;
+  }
+  .about-page h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .about-page p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+}
+.about-page h1,
+.about-page p {
+  overflow-wrap: break-word;
+}
+/* 404 page  */
+@media (max-width: 560px) {
+  .nf {
+    height: 100vh;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nf-actions .btn {
+    flex: 1 1 100%;
+  }
+}
+
 /* Tablet  */
 @media (max-width: 940px) {
   .faqs-page {

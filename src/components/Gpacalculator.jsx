@@ -112,11 +112,6 @@ function GpaCalculator() {
 
   return (
     <>
-      <header>
-        <nav>
-          <Navbar />
-        </nav>
-      </header>
       <main className="page">
         <section className="hero" aria-labelledby="hero-title">
           <h1 id="hero-title" className="hero-title">
@@ -268,9 +263,6 @@ function GpaCalculator() {
 
         <SeoContent />
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }

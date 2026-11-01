@@ -165,12 +165,6 @@ export default function HomePage() {
 
   return (
     <>
-      <header>
-        <nav>
-          {" "}
-          <Navbar />
-        </nav>
-      </header>
       <div className="hm-warp">
         <>
           <script
@@ -317,10 +311,6 @@ export default function HomePage() {
           </section>
         </>
       </div>
-      <footer>
-        {" "}
-        <Footer />
-      </footer>
     </>
   );
 }

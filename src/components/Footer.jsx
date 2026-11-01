@@ -47,7 +47,10 @@ export const Footer = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/gpa-calculator">GPA Calculator</Link>
+                <Link to="/faqs">FAQS</Link>
+              </li>
+              <li>
+                <Link to="/about-us">About Us</Link>
               </li>
             </ul>
           </div>
