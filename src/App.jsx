@@ -13,8 +13,8 @@ function App() {
         <Route path="/college-gpa-calculator" element={<GpaCalculator />} />
         <Route path="/faqs" element={<FAQS />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="*" element={<NotFoundPage />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

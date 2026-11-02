@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SeoContent from "../components/Seocontent.jsx";
-import Navbar from "./Navbar.jsx";
-import Footer from "./Footer.jsx";
+
 const GRADES = [
   { letter: "A", points: 4.0 },
   { letter: "A-", points: 3.7 },

@@ -18,7 +18,7 @@ export const Layout = () => {
     setOpen(false);
     window.scrollTo(0, 0);
   }, [pathname]);
-  // Neeche scroll par hide, upar scroll par show
+
   useEffect(() => {
     let lastY = window.scrollY;
     let ticking = false;
