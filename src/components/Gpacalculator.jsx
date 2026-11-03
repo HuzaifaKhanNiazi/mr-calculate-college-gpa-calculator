@@ -78,7 +78,7 @@ const TrashIcon = ({ size = 20 }) => (
 
 function GpaCalculator() {
   useSeo({
-    title: "College GPA Calculator | Mr Calculate",
+    title: "College GPA Calculator | mr-calculate",
     description:
       "Free college gpa calculator. Enter your grades and credit hours to calculate your college gpa instantly on a 4.0 scale.",
   });
