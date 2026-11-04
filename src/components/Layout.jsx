@@ -53,7 +53,7 @@ export const Layout = () => {
         <nav className="nav-inner" aria-label="Main navigation">
           <Link to="/" className="logo" aria-label="Mr-Calculate home">
             <LogoMark />
-            Mr-Calculate
+            Mr Calculate
           </Link>
 
           <button
@@ -94,7 +94,7 @@ export const Layout = () => {
             <div className="footer-about">
               <Link to="/" className="logo">
                 <LogoMark />
-                Mr-Calculate
+                Mr Calculate
               </Link>
               <p>
                 Free, fast and accurate online calculators for students and
@@ -122,6 +122,12 @@ export const Layout = () => {
               <ul>
                 <li>
                   <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/terms-of-use">Terms of Use</Link>
+                </li>
+                <li>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
                   <Link to="/faqs">FAQS</Link>

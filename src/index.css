@@ -802,7 +802,6 @@ select {
 
 @media (max-width: 480px) {
   .page {
-    padding: 10px 12px 36px;
     margin: 0 auto;
   }
   nav {
