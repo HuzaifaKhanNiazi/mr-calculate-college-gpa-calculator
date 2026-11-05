@@ -652,6 +652,184 @@ select {
   color: #254a74;
   font-style: italic;
 }
+/* Report  */
+.rd {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  border: 0;
+  border-radius: 20px;
+  padding: 0;
+  width: min(580px, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 30px 70px rgba(8, 24, 45, 0.4);
+}
+.rd::backdrop {
+  background: rgba(10, 26, 46, 0.55);
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.rd-form {
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+}
+.rd-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.rd-head h2 {
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+.rd-x {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  background: #eaf3ff;
+  color: var(--navy);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.rd-x:hover {
+  background: #dcebff;
+}
+.rd-sub {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.rd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.rd-field {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.rd-field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+.rd-field label em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--muted);
+}
+.rd-field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #c9dbef;
+  border-radius: 12px;
+  background: #f7faff;
+  color: var(--ink);
+  font-size: 0.97rem;
+}
+.rd-field input:focus {
+  outline: none;
+  border-color: #3d8fe0;
+  box-shadow: 0 0 0 3px rgba(61, 143, 224, 0.2);
+  background: #fff;
+}
+.rd-field input[aria-invalid="true"] {
+  border-color: #d64545;
+}
+.rd-error {
+  color: #c0392b;
+  font-size: 0.83rem;
+}
+.rd-alert {
+  background: #fdecea;
+  color: #a8281b;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.93rem;
+}
+
+.rd-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+.rd-actions .btn {
+  height: 46px;
+}
+.rd-actions .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Download button wali bar (calculator ke neeche) */
+.report-bar {
+  margin-top: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #dde7f5;
+  border-radius: 16px;
+}
+.report-bar p {
+  flex: 1 1 220px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.report-bar .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-dark {
+  background: var(--navy);
+  color: #fff;
+  border: 1px solid var(--navy);
+}
+.btn-dark:hover {
+  background: #12304f;
+}
+.btn-soft {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid #c4dcf7;
+}
+.btn-soft:hover {
+  background: #eaf3ff;
+}
+@media (max-width: 560px) {
+  .rd-form {
+    padding: 16px;
+  }
+  .rd-grid {
+    grid-template-columns: 1fr;
+  }
+  .rd-actions .btn {
+    flex: 1;
+  }
+  .report-bar .btn {
+    width: 100%;
+  }
+}
+
 /* Mobile burger menu */
 @media (max-width: 760px) {
   .burger {

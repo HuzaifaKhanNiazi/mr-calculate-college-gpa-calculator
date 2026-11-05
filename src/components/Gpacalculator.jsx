@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SeoContent from "../components/Seocontent.jsx";
 import useSeo from "../useSeo.js";
+import ReportDialog from "../components/ReportDialog.jsx";
 const GRADES = [
   { letter: "A", points: 4.0 },
   { letter: "A-", points: 3.7 },
@@ -102,6 +103,20 @@ function GpaCalculator() {
       gpa: totalCredits ? totalPoints / totalCredits : 0,
     };
   }, [courses]);
+  const [reportOpen, setReportOpen] = useState(false);
+
+  const reportData = {
+    courses: courses.map((c) => ({
+      name: c.name,
+      grade: c.grade,
+      points: pointsOf(c.grade),
+      credits: c.credits,
+    })),
+    gpa,
+    totalCredits,
+    totalPoints,
+    scale: GRADES,
+  };
 
   const update = (id, field, value) =>
     setCourses((cs) =>
@@ -264,7 +279,25 @@ function GpaCalculator() {
             </p>
           </div>
         </section>
+        <div className="report-bar">
+          <button
+            className="btn btn-dark"
+            onClick={() => setReportOpen(true)}
+            disabled={n === 0}
+          >
+            Download PDF report
+          </button>
+          <p>
+            Get a simple report with your GPA, credit hours and course details,
+            ready to print or share.
+          </p>
+        </div>
 
+        <ReportDialog
+          open={reportOpen}
+          onClose={() => setReportOpen(false)}
+          data={reportData}
+        />
         <SeoContent />
       </main>
     </>

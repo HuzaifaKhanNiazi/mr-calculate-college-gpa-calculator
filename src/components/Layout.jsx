@@ -32,11 +32,11 @@ export const Layout = () => {
         const diff = y - lastY;
 
         if (y < 80) {
-          setHidden(false); // page ke top par hamesha dikhe
+          setHidden(false);
         } else if (diff > 8 && !open) {
-          setHidden(true); // neeche scroll
+          setHidden(true);
         } else if (diff < -8) {
-          setHidden(false); // upar scroll
+          setHidden(false);
         }
 
         lastY = y;

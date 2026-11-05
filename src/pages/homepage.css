@@ -1,4 +1,4 @@
-/* ===== Home page ===== */
+/* Home page*/
 .hm-warp {
   padding: 0 clamp(8px, 3vw, 32px);
   margin: 20px 0 20px 0;
@@ -358,7 +358,7 @@ a {
   font-size: 0.95rem;
 }
 
-/* ===== FAQs page ===== */
+/*FAQs page */
 .faqs-page {
   max-width: 820px;
   margin: 0 auto;
@@ -378,7 +378,6 @@ a {
   letter-spacing: -0.035em;
 }
 
-/* Question cards thode bade, page par akele hain */
 .faqs-page .faq-item {
   margin-bottom: 12px;
 }
@@ -392,7 +391,7 @@ a {
   padding: 0 20px 20px;
 }
 
-/* ===== 404 page ===== */
+/* 404 page */
 .nf {
   display: flex;
   align-items: center;
@@ -429,7 +428,6 @@ a {
   user-select: none;
 }
 
-/* Badal (clouds) */
 .nf-visual::before,
 .nf-visual::after {
   content: "";
@@ -519,7 +517,7 @@ a {
   background: #12304f;
 }
 
-/* ===== About page ===== */
+/*  About page */
 .about-page {
   max-width: 720px;
   margin: 0 auto;
