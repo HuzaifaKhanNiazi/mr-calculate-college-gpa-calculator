@@ -1,3 +1,16 @@
+const GRADES = [
+  { letter: "A", points: 4.0 },
+  { letter: "A-", points: 3.7 },
+  { letter: "B+", points: 3.3 },
+  { letter: "B", points: 3.0 },
+  { letter: "B-", points: 2.7 },
+  { letter: "C+", points: 2.3 },
+  { letter: "C", points: 2.0 },
+  { letter: "C-", points: 1.7 },
+  { letter: "D+", points: 1.3 },
+  { letter: "D", points: 1.0 },
+  { letter: "F", points: 0.0 },
+];
 const EXAMPLE = [
   { course: "Mathematics", grade: "A", points: 4.0, credits: 3 },
   { course: "English", grade: "B", points: 3.0, credits: 3 },
@@ -19,7 +32,34 @@ const RANGES = [
 function SeoContent() {
   return (
     <article className="content">
-      <section aria-labelledby="what-is">
+      <section className="scale" aria-labelledby="scale-title">
+        <h2 id="scale-title">
+          Letter Grades and Numerical Equivalents Used in This Calculator
+        </h2>
+        <p>
+          This calculator uses the standard 4.0 grading scale with plus and
+          minus grades. Each letter grade is converted to grade points out of
+          4.0, then multiplied by the course's credit hours to get your GPA.
+        </p>
+
+        <ul className="grade-list" aria-label="Letter grade to grade points">
+          {GRADES.map((g) => (
+            <li key={g.letter}>
+              <strong>{g.letter}</strong>
+              <span>= {g.points.toFixed(1)}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p className="scale-note">
+          <strong>Please note:</strong> Grading scales differ between
+          universities. Some use 3.67 for A-, 4.33 for A+, or a 5.0 or 10-point
+          scale. This calculator gives results out of 4.00 only, so please check
+          your university's grading policy before relying on the result. If your
+          university gives A+ the same value as A, select A.
+        </p>
+      </section>
+      {/* <section aria-labelledby="what-is">
         <h2 id="what-is">What Is a College GPA Calculator?</h2>
         <p>
           A College GPA Calculator is an online tool that helps college and
@@ -57,7 +97,7 @@ function SeoContent() {
             results and monitor academic improvement.
           </li>
         </ul>
-      </section>
+      </section> */}
 
       <section aria-labelledby="how-to-use">
         <h2 id="how-to-use">How to Use the College GPA Calculator</h2>

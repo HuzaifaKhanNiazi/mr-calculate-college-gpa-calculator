@@ -18,6 +18,17 @@ export const FAQS = () => {
       q: "Which calculators are available?",
       a: "You can use the College GPA Calculator today. More calculators, including a CGPA calculator, are being added regularly.",
     },
+    {
+      q: "What Is a College GPA Calculator?",
+      a: ` A College GPA Calculator is an online tool that helps college and
+          university students calculate their Grade Point Average (GPA) based on
+          their course grades. GPA is a numerical representation of academic
+          performance, commonly calculated on a 4.0 scale in the United States.`,
+    },
+    {
+      q: "Who Can Use a College GPA Calculator?",
+      a: "College gpa calculator can be used by college,university and students planning their goals.",
+    },
   ];
   const faqSchema = {
     "@context": "https://schema.org",

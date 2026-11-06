@@ -64,7 +64,7 @@ const SECTIONS = [
     id: "calculator-data",
     title: "4. Calculator Data on Your Device",
     blocks: [
-      "Values you enter into our calculators, such as course names, grades and credit hours, are saved in your browser's local storage on your own device so they are available when you return. This information is not sent to our servers.",
+      "Values you enter into our calculators, such as course names, grades and credit hours, are saved in your browser's local storage on your own device so they are available when you return. This information is not sent to servers.",
       "You can remove this data at any time by clearing your browser's site data.",
     ],
   },
@@ -90,7 +90,7 @@ const SECTIONS = [
     title: "7. Children's Privacy",
     blocks: [
       "Mr Calculate does not knowingly collect personal information from children without appropriate consent where required by applicable law.",
-      "If you believe that a child has provided personal information to us, please contact us so that we can take appropriate action.",
+      // "If you believe that a child has provided personal information to us, please contact us so that we can take appropriate action.",
     ],
   },
   //   {
