@@ -127,39 +127,41 @@ export default function PrivacyPolicy() {
   });
 
   return (
-    <article className="legal-page">
-      <h1>Privacy Policy</h1>
-      <p className="legal-date">Last Updated: November 4, 2026</p>
+    <main>
+      <article className="legal-page">
+        <h1>Privacy Policy</h1>
+        <p className="legal-date">Last Updated: November 4, 2026</p>
 
-      <p>
-        Welcome to <strong>Mr Calculate</strong>. Your privacy is important to
-        us. This Privacy Policy explains how we collect, use and protect
-        information when you visit or use our website.The Personal Information
-        that we collect is used for providing and improving the Service. We will
-        not use or share your information with anyone except as described in
-        this Privacy Policy.
-      </p>
-      <p>
-        By using Mr Calculate, you agree to the practices described in this
-        Privacy Policy.
-      </p>
+        <p>
+          Welcome to <strong>Mr Calculate</strong>. Your privacy is important to
+          us. This Privacy Policy explains how we collect, use and protect
+          information when you visit or use our website.The Personal Information
+          that we collect is used for providing and improving the Service. We
+          will not use or share your information with anyone except as described
+          in this Privacy Policy.
+        </p>
+        <p>
+          By using Mr Calculate, you agree to the practices described in this
+          Privacy Policy.
+        </p>
 
-      {SECTIONS.map((s) => (
-        <section key={s.id} aria-labelledby={s.id}>
-          <h2 id={s.id}>{s.title}</h2>
-          {s.blocks.map((b, i) =>
-            Array.isArray(b) ? (
-              <ul key={i}>
-                {b.map((li) => (
-                  <li key={li}>{li}</li>
-                ))}
-              </ul>
-            ) : (
-              <p key={i}>{b}</p>
-            ),
-          )}
-        </section>
-      ))}
-    </article>
+        {SECTIONS.map((s) => (
+          <section key={s.id} aria-labelledby={s.id}>
+            <h2 id={s.id}>{s.title}</h2>
+            {s.blocks.map((b, i) =>
+              Array.isArray(b) ? (
+                <ul key={i}>
+                  {b.map((li) => (
+                    <li key={li}>{li}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p key={i}>{b}</p>
+              ),
+            )}
+          </section>
+        ))}
+      </article>
+    </main>
   );
 }

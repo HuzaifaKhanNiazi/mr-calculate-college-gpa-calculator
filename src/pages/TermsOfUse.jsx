@@ -88,34 +88,36 @@ export default function TermsOfUse() {
   });
 
   return (
-    <article className="legal-page">
-      <h1>Terms of Use</h1>
-      <p className="legal-date">Last Updated: November 4, 2026</p>
+    <main>
+      <article className="legal-page">
+        <h1>Terms of Use</h1>
+        <p className="legal-date">Last Updated: November 4, 2026</p>
 
-      <p>
-        Welcome to <strong>Mr Calculate</strong>. By accessing or using our
-        website, you agree to these Terms of Use. Please read them carefully
-        before using our website.
-      </p>
+        <p>
+          Welcome to <strong>Mr Calculate</strong>. By accessing or using our
+          website, you agree to these Terms of Use. Please read them carefully
+          before using our website.
+        </p>
 
-      {SECTIONS.map((s) => (
-        <section key={s.title} aria-labelledby={s.title}>
-          <h2 id={s.title}>{s.title}</h2>
-          {s.blocks.map((b, i) =>
-            Array.isArray(b) ? (
-              <ul key={i}>
-                {b.map((li) => (
-                  <li key={li}>{li}</li>
-                ))}
-              </ul>
-            ) : (
-              <p key={i}>{b}</p>
-            ),
-          )}
-        </section>
-      ))}
+        {SECTIONS.map((s) => (
+          <section key={s.title} aria-labelledby={s.title}>
+            <h2 id={s.title}>{s.title}</h2>
+            {s.blocks.map((b, i) =>
+              Array.isArray(b) ? (
+                <ul key={i}>
+                  {b.map((li) => (
+                    <li key={li}>{li}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p key={i}>{b}</p>
+              ),
+            )}
+          </section>
+        ))}
 
-      <p className="legal-thanks">Thank you for using Mr Calculate!</p>
-    </article>
+        <p className="legal-thanks">Thank you for using Mr Calculate!</p>
+      </article>
+    </main>
   );
 }

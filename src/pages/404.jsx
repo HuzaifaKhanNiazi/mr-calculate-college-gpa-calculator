@@ -13,22 +13,24 @@ export default function NotFound() {
   }, []);
 
   return (
-    <section className="nf" aria-labelledby="nf-title">
-      <div className="nf-visual" aria-hidden="true">
-        <span className="nf-num">404</span>
-      </div>
+    <main>
+      <section className="nf" aria-labelledby="nf-title">
+        <div className="nf-visual" aria-hidden="true">
+          <span className="nf-num">404</span>
+        </div>
 
-      <h1 id="nf-title">Sorry, that page could not be found</h1>
-      <p>
-        The page you requested either doesn't exist or has been moved. Let's get
-        you back to the calculators.
-      </p>
+        <h1 id="nf-title">Sorry, that page could not be found</h1>
+        <p>
+          The page you requested either doesn't exist or has been moved. Let's
+          get you back to the calculators.
+        </p>
 
-      <div className="nf-actions">
-        <Link to="/" className="btn btn-dark">
-          Go Back Home
-        </Link>
-      </div>
-    </section>
+        <div className="nf-actions">
+          <Link to="/" className="btn btn-dark">
+            Go Back Home
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

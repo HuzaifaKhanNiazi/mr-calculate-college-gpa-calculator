@@ -64,7 +64,7 @@ const WHY = [
   },
   {
     title: "Private by design",
-    text: "Your entries stay in your browser and are never sold.",
+    text: "Your entries stay in your browser.",
     icon: "M12 1a5 5 0 0 0-5 5v3H5v13h14V9h-2V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z",
   },
 ];
@@ -107,6 +107,7 @@ const STATS = [
   ["Free", "No signup needed"],
   ["Instant", "Live results"],
   ["4.0", "GPA scale"],
+  ["Accuracy", "Accurate results"],
 ];
 
 const FAQS = [
@@ -157,158 +158,164 @@ export default function HomePage() {
       .querySelector('meta[name="description"]')
       ?.setAttribute(
         "content",
-        "Mr Calculate offers free online calculators, including a college GPA calculator with credit hours. Fast, simple and accurate.",
+        "Mr Calculate offers free online calculators, including a college GPA,adp paycheck and many more calculators. Fast, simple and accurate.",
       );
   }, []);
 
   return (
     <>
-      <div className="hm-warp">
-        <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-          />
+      <main>
+        <div className="hm-warp">
+          <>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
 
-          <section className="hm-hero" aria-labelledby="hm-title">
-            <div className="hm-hero-copy">
-              <span className="hm-pill">Free online calculators</span>
-              <h1 id="hm-title">
-                Calculate faster with <span>Mr Calculate</span>
-              </h1>
-              <p>
-                Simple, accurate and free calculators for students and everyday
-                use. Choose a tool, enter your values and see the result
-                instantly.
-              </p>
-              <div className="hm-actions">
-                <Link to="/college-gpa-calculator" className="btn btn-light">
-                  Calculate your GPA
-                </Link>
-                <a href="#tools" className="btn btn-outline">
-                  Browse all tools
-                </a>
-              </div>
-            </div>
-
-            <div className="hm-preview" aria-hidden="true">
-              <div className="hm-preview-top">
-                <span>Example result</span>
-                <span className="hm-live">
-                  <i /> Live
-                </span>
-              </div>
-              <div className="hm-preview-gpa">
-                3.70 <small>/ 4.00</small>
-              </div>
-              <div className="hm-preview-bar">
-                <div />
-              </div>
-              <div className="hm-preview-rows">
-                <div>
-                  <span>Total credits</span>
-                  <strong>10</strong>
-                </div>
-                <div>
-                  <span>Grade points</span>
-                  <strong>37.0</strong>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* Stats */}
-          <ul className="hm-stats" aria-label="Highlights">
-            {STATS.map(([big, small]) => (
-              <li key={big}>
-                <strong>{big}</strong>
-                <span>{small}</span>
-              </li>
-            ))}
-          </ul>
-          {/* Tools */}
-          <section className="hm-section" id="tools" aria-labelledby="hm-tools">
-            <div className="hm-head">
-              <h2 id="hm-tools">Popular calculators</h2>
-              <p>Pick a tool and get your answer in seconds.</p>
-            </div>
-            <div className="hm-tools">
-              {TOOLS.map((t) => {
-                const body = (
-                  <>
-                    <span className="hm-icon">
-                      <Icon d={t.icon} />
-                    </span>
-                    <span className="hm-tag">{t.category}</span>
-                    <h3>{t.name}</h3>
-                    <p>{t.desc}</p>
-                    <span className="hm-go">
-                      {t.ready ? "Open calculator →" : "Coming soon"}
-                    </span>
-                  </>
-                );
-                return t.ready ? (
-                  <Link key={t.name} to={t.path} className="hm-tool">
-                    {body}
+            <section className="hm-hero" aria-labelledby="hm-title">
+              <div className="hm-hero-copy">
+                <span className="hm-pill">Free online calculators</span>
+                <h1 id="hm-title">
+                  Calculate faster with <span>Mr Calculate</span>
+                </h1>
+                <p>
+                  Simple, accurate and free calculators for students and
+                  everyday use. Choose a tool, enter your values and see the
+                  result instantly.
+                </p>
+                <div className="hm-actions">
+                  <Link to="/college-gpa-calculator" className="btn btn-light">
+                    Calculate your GPA
                   </Link>
-                ) : (
-                  <div key={t.name} className="hm-tool off">
-                    {body}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-          {/* Why */}
-          <section className="hm-section" aria-labelledby="hm-why">
-            <div className="hm-head">
-              <h2 id="hm-why">Why choose Mr Calculate?</h2>
-              <p>Built to be quick, clear and easy to trust.</p>
-            </div>
-            <div className="hm-grid">
-              {WHY.map((w) => (
-                <div key={w.title} className="hm-card">
-                  <span className="hm-icon sm">
-                    <Icon d={w.icon} />
-                  </span>
-                  <h3>{w.title}</h3>
-                  <p>{w.text}</p>
+                  <a href="#tools" className="btn btn-outline">
+                    Browse all tools
+                  </a>
                 </div>
-              ))}
-            </div>
-          </section>
-          {/* How it works */}
-          <section className="hm-section" aria-labelledby="hm-how">
-            <div className="hm-head">
-              <h2 id="hm-how">How it works</h2>
-              <p>Three simple steps from question to answer.</p>
-            </div>
-            <ol className="hm-steps">
-              {STEPS.map((s, i) => (
-                <li key={s.title}>
-                  <span className="hm-num">{i + 1}</span>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
+              </div>
+
+              <div className="hm-preview" aria-hidden="true">
+                <div className="hm-preview-top">
+                  <span>Example result</span>
+                  <span className="hm-live">
+                    <i /> Live
+                  </span>
+                </div>
+                <div className="hm-preview-gpa">
+                  3.70 <small>/ 4.00</small>
+                </div>
+                <div className="hm-preview-bar">
+                  <div />
+                </div>
+                <div className="hm-preview-rows">
+                  <div>
+                    <span>Total credits</span>
+                    <strong>10</strong>
+                  </div>
+                  <div>
+                    <span>Grade points</span>
+                    <strong>37.0</strong>
+                  </div>
+                </div>
+              </div>
+            </section>
+            {/* Stats */}
+            <ul className="hm-stats" aria-label="Highlights">
+              {STATS.map(([big, small]) => (
+                <li key={big}>
+                  <strong>{big}</strong>
+                  <span>{small}</span>
                 </li>
               ))}
-            </ol>
-          </section>
-          {/* Audience */}
-          <section className="hm-section" aria-labelledby="hm-who">
-            <div className="hm-head">
-              <h2 id="hm-who">Who is Mr Calculate for?</h2>
-              <p>Made for anyone who needs a quick, reliable answer.</p>
-            </div>
-            <div className="hm-grid four">
-              {AUDIENCE.map((a) => (
-                <div key={a.title} className="hm-card">
-                  <h3>{a.title}</h3>
-                  <p>{a.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        </>
-      </div>
+            </ul>
+            {/* Tools */}
+            <section
+              className="hm-section"
+              id="tools"
+              aria-labelledby="hm-tools"
+            >
+              <div className="hm-head">
+                <h2 id="hm-tools">Popular calculators</h2>
+                <p>Pick a tool and get your answer in seconds.</p>
+              </div>
+              <div className="hm-tools">
+                {TOOLS.map((t) => {
+                  const body = (
+                    <>
+                      <span className="hm-icon">
+                        <Icon d={t.icon} />
+                      </span>
+                      <span className="hm-tag">{t.category}</span>
+                      <h3>{t.name}</h3>
+                      <p>{t.desc}</p>
+                      <span className="hm-go">
+                        {t.ready ? "Open calculator →" : "Coming soon"}
+                      </span>
+                    </>
+                  );
+                  return t.ready ? (
+                    <Link key={t.name} to={t.path} className="hm-tool">
+                      {body}
+                    </Link>
+                  ) : (
+                    <div key={t.name} className="hm-tool off">
+                      {body}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+            {/* Why */}
+            <section className="hm-section" aria-labelledby="hm-why">
+              <div className="hm-head">
+                <h2 id="hm-why">Why choose Mr Calculate?</h2>
+                <p>Built to be quick, clear and easy to trust.</p>
+              </div>
+              <div className="hm-grid">
+                {WHY.map((w) => (
+                  <div key={w.title} className="hm-card">
+                    <span className="hm-icon sm">
+                      <Icon d={w.icon} />
+                    </span>
+                    <h3>{w.title}</h3>
+                    <p>{w.text}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+            {/* How it works */}
+            <section className="hm-section" aria-labelledby="hm-how">
+              <div className="hm-head">
+                <h2 id="hm-how">How it works</h2>
+                <p>Three simple steps from question to answer.</p>
+              </div>
+              <ol className="hm-steps">
+                {STEPS.map((s, i) => (
+                  <li key={s.title}>
+                    <span className="hm-num">{i + 1}</span>
+                    <h3>{s.title}</h3>
+                    <p>{s.text}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+            {/* Audience */}
+            <section className="hm-section" aria-labelledby="hm-who">
+              <div className="hm-head">
+                <h2 id="hm-who">Who is Mr Calculate for?</h2>
+                <p>Made for anyone who needs a quick, reliable answer.</p>
+              </div>
+              <div className="hm-grid four">
+                {AUDIENCE.map((a) => (
+                  <div key={a.title} className="hm-card">
+                    <h3>{a.title}</h3>
+                    <p>{a.text}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        </div>
+      </main>
     </>
   );
 }

@@ -266,11 +266,11 @@ function GpaCalculator() {
             </div>
             <div className="totals-grid">
               <div>
-                <p className="muted">Total credits</p>
+                <p className="muted">Total Credit Hours</p>
                 <strong>{totalCredits}</strong>
               </div>
               <div>
-                <p className="muted">Total grade points</p>
+                <p className="muted">Total Quality Points</p>
                 <strong>{totalPoints.toFixed(1)}</strong>
               </div>
             </div>

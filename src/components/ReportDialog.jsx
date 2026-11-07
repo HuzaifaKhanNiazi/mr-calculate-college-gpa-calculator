@@ -100,81 +100,85 @@ export default function ReportDialog({ open, onClose, data }) {
   };
 
   return (
-    <dialog
-      ref={ref}
-      className="rd"
-      aria-labelledby="rd-title"
-      onClose={onClose}
-      onClick={(e) => e.target === ref.current && onClose()}
-    >
-      <form className="rd-form" onSubmit={onSubmit} noValidate>
-        <div className="rd-head">
-          <h2 id="rd-title">Download PDF report</h2>
-          <button
-            type="button"
-            className="rd-x"
-            onClick={onClose}
-            aria-label="Close"
-          >
-            ×
-          </button>
-        </div>
+    <main>
+      <dialog
+        ref={ref}
+        className="rd"
+        aria-labelledby="rd-title"
+        onClose={onClose}
+        onClick={(e) => e.target === ref.current && onClose()}
+      >
+        <form className="rd-form" onSubmit={onSubmit} noValidate>
+          <div className="rd-head">
+            <h2 id="rd-title">Download PDF report</h2>
+            <button
+              type="button"
+              className="rd-x"
+              onClick={onClose}
+              aria-label="Close"
+            >
+              ×
+            </button>
+          </div>
 
-        <div className="rd-grid">
-          {FIELDS.map((f) => (
-            <div key={f.key} className="rd-field">
-              <label htmlFor={`rd-${f.key}`}>
-                {f.label}
-                {f.required ? (
-                  <span aria-hidden="true"> *</span>
-                ) : (
-                  <em> (optional)</em>
+          <div className="rd-grid">
+            {FIELDS.map((f) => (
+              <div key={f.key} className="rd-field">
+                <label htmlFor={`rd-${f.key}`}>
+                  {f.label}
+                  {f.required ? (
+                    <span aria-hidden="true"> *</span>
+                  ) : (
+                    <em> (optional)</em>
+                  )}
+                </label>
+                <input
+                  id={`rd-${f.key}`}
+                  name={f.key}
+                  type="text"
+                  maxLength={80}
+                  list={f.list}
+                  autoComplete={f.autoComplete || "off"}
+                  placeholder={f.placeholder}
+                  value={values[f.key]}
+                  onChange={onChange}
+                  aria-required={f.required || undefined}
+                  aria-invalid={!!errors[f.key]}
+                  aria-describedby={
+                    errors[f.key] ? `rd-${f.key}-err` : undefined
+                  }
+                />
+                {errors[f.key] && (
+                  <span id={`rd-${f.key}-err`} className="rd-error">
+                    {errors[f.key]}
+                  </span>
                 )}
-              </label>
-              <input
-                id={`rd-${f.key}`}
-                name={f.key}
-                type="text"
-                maxLength={80}
-                list={f.list}
-                autoComplete={f.autoComplete || "off"}
-                placeholder={f.placeholder}
-                value={values[f.key]}
-                onChange={onChange}
-                aria-required={f.required || undefined}
-                aria-invalid={!!errors[f.key]}
-                aria-describedby={errors[f.key] ? `rd-${f.key}-err` : undefined}
-              />
-              {errors[f.key] && (
-                <span id={`rd-${f.key}-err`} className="rd-error">
-                  {errors[f.key]}
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
+              </div>
+            ))}
+          </div>
 
-        <datalist id="rd-degrees">
-          {DEGREES.map((d) => (
-            <option key={d} value={d} />
-          ))}
-        </datalist>
+          <datalist id="rd-degrees">
+            {DEGREES.map((d) => (
+              <option key={d} value={d} />
+            ))}
+          </datalist>
 
-        {failed && (
-          <p className="rd-alert" role="alert">
-            Could not create the PDF. Please try again.
-          </p>
-        )}
+          {failed && (
+            <p className="rd-alert" role="alert">
+              Could not create the PDF. Please try again.
+            </p>
+          )}
 
-        <div className="rd-actions">
-          <button type="button" className="btn btn-soft" onClick={onClose}>
-            Cancel
-          </button>
-          <button type="submit" className="btn btn-dark" disabled={busy}>
-            {busy ? "Creating PDF..." : "Download PDF"}
-          </button>
-        </div>
-      </form>
-    </dialog>
+          <div className="rd-actions">
+            <button type="button" className="btn btn-soft" onClick={onClose}>
+              Cancel
+            </button>
+            <button type="submit" className="btn btn-dark" disabled={busy}>
+              {busy ? "Creating PDF..." : "Download PDF"}
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </main>
   );
 }
