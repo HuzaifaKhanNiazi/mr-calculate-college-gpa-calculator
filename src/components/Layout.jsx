@@ -106,7 +106,9 @@ export const Layout = () => {
               <h3>Calculators</h3>
               <ul>
                 <li>
-                  <Link to="/gpa-calculator">College GPA Calculator</Link>
+                  <Link to="/college-gpa-calculator">
+                    College GPA Calculator
+                  </Link>
                 </li>
                 <li>
                   <span className="soon">CGPA Calculator (soon)</span>
@@ -144,8 +146,8 @@ export const Layout = () => {
               © {new Date().getFullYear()} mr-calculate. All rights reserved.
             </p>
             <p>
-              Results are estimates. Always check your institution's grading
-              policy.
+              Results are estimates. Please verify important figures before
+              making any decision.
             </p>
           </div>
         </div>

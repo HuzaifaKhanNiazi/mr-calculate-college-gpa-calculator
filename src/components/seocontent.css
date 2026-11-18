@@ -20,7 +20,7 @@
 }
 .content .tip {
   background: #e8f2ff;
-  border-left: 4px solid #3d8fe0;
+  border: 1px solid #c9dcf2;
   border-radius: 10px;
   padding: 12px 16px;
   color: var(--navy);
@@ -115,7 +115,7 @@
 
 .scale-note {
   background: #e8f2ff;
-  border-left: 4px solid #3d8fe0;
+  border: 1px solid #c9dcf2;
   border-radius: 10px;
   padding: 12px 16px;
   color: var(--navy) !important;

@@ -447,8 +447,7 @@ select {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(18, 48, 79, 0.96);
-  backdrop-filter: blur(8px);
+  background: #12304f;
   transition: transform 0.3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }

@@ -36,9 +36,10 @@ export default function AboutPage() {
           <p>
             Mr Calculate is free to use and does not require an account. The
             values you enter stay in your own browser. Please note that our
-            calculators provide estimates, and grading rules can differ between
-            institutions, so always confirm important results with your college
-            or university.
+            calculators provide estimates for general information only. Rules,
+            rates and requirements can differ by institution, country or
+            provider, so always confirm important results with the relevant
+            official source before making a decision.
           </p>
         </article>
       </main>

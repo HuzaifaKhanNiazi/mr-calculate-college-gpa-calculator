@@ -36,39 +36,6 @@ const TOOLS = [
   },
 ];
 
-const WHY = [
-  {
-    title: "100% free",
-    text: "No signup and no payment. Open a calculator and start.",
-    icon: "M12 2 4 6v6c0 5 3.4 9.7 8 10 4.6-.3 8-5 8-10V6l-8-4zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z",
-  },
-  {
-    title: "Instant results",
-    text: "Your result updates live as soon as you change a value.",
-    icon: "M13 2 4 14h6l-1 8 9-12h-6l1-8z",
-  },
-  {
-    title: "Clean and simple",
-    text: "A clear layout that anyone can use without a guide.",
-    icon: "M4 5h16v3H4V5zm0 5.5h10v3H4v-3zM4 16h16v3H4v-3z",
-  },
-  //   {
-  //     title: "Works on any device",
-  //     text: "Fully responsive on phones, tablets and desktop screens.",
-  //     icon: "M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm5 18.2a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2zM7 5v11h10V5H7z",
-  //   },
-  {
-    title: "Accurate formulas",
-    text: "Standard, transparent formulas you can verify yourself.",
-    icon: "M5 3h14v4h-2V5H7.8l5.2 7-5.2 7H17v-2h2v4H5v-2l5.4-7L5 5V3z",
-  },
-  {
-    title: "Private by design",
-    text: "Your entries stay in your browser.",
-    icon: "M12 1a5 5 0 0 0-5 5v3H5v13h14V9h-2V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z",
-  },
-];
-
 const STEPS = [
   {
     title: "Choose a calculator",
@@ -81,25 +48,6 @@ const STEPS = [
   {
     title: "Get your result",
     text: "See the answer instantly, with no extra steps.",
-  },
-];
-
-const AUDIENCE = [
-  {
-    title: "Students",
-    text: "Track grades, GPA and academic goals with confidence.",
-  },
-  {
-    title: "Professionals",
-    text: "Run quick calculations without opening a spreadsheet.",
-  },
-  {
-    title: "Everyday users",
-    text: "Handle day-to-day numbers fast and without errors.",
-  },
-  {
-    title: "Freelancers and small businesses",
-    text: "Check figures quickly before you send a quote or invoice.",
   },
 ];
 
@@ -268,18 +216,33 @@ export default function HomePage() {
             <section className="hm-section" aria-labelledby="hm-why">
               <div className="hm-head">
                 <h2 id="hm-why">Why choose Mr Calculate?</h2>
-                <p>Built to be quick, clear and easy to trust.</p>
               </div>
-              <div className="hm-grid">
-                {WHY.map((w) => (
-                  <div key={w.title} className="hm-card">
-                    <span className="hm-icon sm">
-                      <Icon d={w.icon} />
-                    </span>
-                    <h3>{w.title}</h3>
-                    <p>{w.text}</p>
+              <div className="hm-text">
+                <p className="hm-lead">
+                  Mr Calculate is built to give you a quick, clear answer
+                  without distractions.
+                </p>
+                <dl className="hm-defs">
+                  <div>
+                    <dt>Free to use</dt>
+                    <dd>
+                      No signup and no payment. Open a calculator and start.
+                    </dd>
                   </div>
-                ))}
+                  <div>
+                    <dt>Instant results</dt>
+                    <dd>Your result updates as soon as you change a value.</dd>
+                  </div>
+
+                  <div>
+                    <dt>Standard formulas</dt>
+                    <dd>Commonly used methods that you can verify yourself.</dd>
+                  </div>
+                  <div>
+                    <dt>Private by design</dt>
+                    <dd>Your entries stay in your own browser.</dd>
+                  </div>
+                </dl>
               </div>
             </section>
             {/* How it works */}
@@ -302,15 +265,37 @@ export default function HomePage() {
             <section className="hm-section" aria-labelledby="hm-who">
               <div className="hm-head">
                 <h2 id="hm-who">Who is Mr Calculate for?</h2>
-                <p>Made for anyone who needs a quick, reliable answer.</p>
               </div>
-              <div className="hm-grid four">
-                {AUDIENCE.map((a) => (
-                  <div key={a.title} className="hm-card">
-                    <h3>{a.title}</h3>
-                    <p>{a.text}</p>
+              <div className="hm-text">
+                <p className="hm-lead">
+                  Mr Calculate is made for anyone who needs a quick, reliable
+                  answer.
+                </p>
+                <dl className="hm-defs">
+                  <div>
+                    <dt>Students</dt>
+                    <dd>
+                      Check grades and GPA, and plan your academic goals with
+                      confidence.
+                    </dd>
                   </div>
-                ))}
+                  <div>
+                    <dt>Professionals</dt>
+                    <dd>
+                      Run quick calculations without opening a spreadsheet.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Freelancers and small businesses</dt>
+                    <dd>
+                      Verify your figures before sending a quote or an invoice.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Everyday users</dt>
+                    <dd>Get a dependable result in a few seconds.</dd>
+                  </div>
+                </dl>
               </div>
             </section>
           </>
