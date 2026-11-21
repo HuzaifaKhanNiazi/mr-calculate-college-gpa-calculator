@@ -1,5 +1,3 @@
-import useSeo from "../useSeo.js";
-
 const SECTIONS = [
   {
     title: "1. Acceptance of Terms",
@@ -81,12 +79,6 @@ const SECTIONS = [
 ];
 
 export default function TermsOfUse() {
-  useSeo({
-    title: "Terms of Use | Mr Calculate",
-    description:
-      "Read the Terms of Use for Mr Calculate, including website use, calculator accuracy, intellectual property and limitation of liability.",
-  });
-
   return (
     <main>
       <article className="legal-page">

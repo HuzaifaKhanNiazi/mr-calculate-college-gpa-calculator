@@ -2,15 +2,15 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function AboutPage() {
-  useEffect(() => {
-    document.title = "About Us | Mr Calculate";
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute(
-        "content",
-        "Learn about Mr Calculate, a free collection of simple and accurate online calculators for students and everyday use.",
-      );
-  }, []);
+  // useEffect(() => {
+  //   document.title = "About Us | Mr Calculate";
+  //   document
+  //     .querySelector('meta[name="description"]')
+  //     ?.setAttribute(
+  //       "content",
+  //       "Learn about Mr Calculate, a free collection of simple and accurate online calculators for students and everyday use.",
+  //     );
+  // }, []);
 
   return (
     <>

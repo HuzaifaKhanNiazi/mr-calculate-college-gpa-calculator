@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
-
+import useRouteSeo from "../useRouteSeo.js";
 const LogoMark = () => (
   <span className="logo-mark" aria-hidden="true">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -13,7 +13,7 @@ export const Layout = () => {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const [hidden, setHidden] = useState(false);
-
+  useRouteSeo();
   useEffect(() => {
     setOpen(false);
     window.scrollTo(0, 0);

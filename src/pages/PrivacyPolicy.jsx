@@ -1,5 +1,3 @@
-import useSeo from "../useSeo.js";
-
 const SECTIONS = [
   {
     id: "information-we-collect",
@@ -120,12 +118,6 @@ const SECTIONS = [
 ];
 
 export default function PrivacyPolicy() {
-  useSeo({
-    title: "Privacy Policy | Mr Calculate",
-    description:
-      "Read the Mr Calculate Privacy Policy to learn what information we collect, how we use cookies and how we protect your data.",
-  });
-
   return (
     <main>
       <article className="legal-page">

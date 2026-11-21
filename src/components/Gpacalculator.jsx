@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SeoContent from "../components/Seocontent.jsx";
-import useSeo from "../useSeo.js";
+
 import ReportDialog from "../components/ReportDialog.jsx";
 const GRADES = [
   { letter: "A", points: 4.0 },
@@ -78,11 +78,6 @@ const TrashIcon = ({ size = 20 }) => (
 );
 
 function GpaCalculator() {
-  useSeo({
-    title: "College GPA Calculator | mr-calculate",
-    description:
-      "Free college gpa calculator. Enter your grades and credit hours to calculate your college gpa instantly on a 4.0 scale.",
-  });
   const [courses, setCourses] = useState(loadCourses);
 
   useEffect(() => {

@@ -100,15 +100,15 @@ const Icon = ({ d }) => (
 );
 
 export default function HomePage() {
-  useEffect(() => {
-    document.title = "Mr Calculate | Free Online Calculators for Students";
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute(
-        "content",
-        "Mr Calculate offers free online calculators, including a college GPA,adp paycheck and many more calculators. Fast, simple and accurate.",
-      );
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Mr Calculate | Free Online Calculators for Students";
+  //   document
+  //     .querySelector('meta[name="description"]')
+  //     ?.setAttribute(
+  //       "content",
+  //       "Mr Calculate offers free online calculators, including a college GPA,adp paycheck and many more calculators. Fast, simple and accurate.",
+  //     );
+  // }, []);
 
   return (
     <>
