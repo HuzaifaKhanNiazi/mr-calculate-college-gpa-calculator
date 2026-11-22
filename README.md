@@ -1,1 +1,1 @@
-# mr-calculate-College-gpa-calculator
+# mr-calculate.com
