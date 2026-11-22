@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs.jsx";
 import { FAQS } from "./pages/FAQS.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfUse from "./pages/TermsOfUse.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
 function App() {
   return (
     <Routes>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/faqs" element={<FAQS />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />

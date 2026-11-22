@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const SECTIONS = [
   {
     id: "information-we-collect",
@@ -108,11 +109,18 @@ const SECTIONS = [
   //   },
   {
     id: "policy-changes",
-    title: "9. Changes to This Privacy Policy",
+    title: "8. Changes to This Privacy Policy",
     blocks: [
       "We may update this Privacy Policy from time to time to reflect changes in our website, services, or applicable laws.",
       "Any updates will be published on this page with a revised Last Updated date.",
       "We encourage visitors to review this page periodically.",
+    ],
+  },
+  {
+    id: "contact-us",
+    title: "9. Contact Us",
+    blocks: [
+      " If you have any questions about this Privacy Policy, please visit our Contact Us section.",
     ],
   },
 ];
@@ -125,12 +133,15 @@ export default function PrivacyPolicy() {
         <p className="legal-date">Last Updated: November 4, 2026</p>
 
         <p>
-          Welcome to <strong>Mr Calculate</strong>. Your privacy is important to
-          us. This Privacy Policy explains how we collect, use and protect
-          information when you visit or use our website.The Personal Information
-          that we collect is used for providing and improving the Service. We
-          will not use or share your information with anyone except as described
-          in this Privacy Policy.
+          Welcome to{" "}
+          <strong>
+            <Link to="/">mr-calculate.com</Link>
+          </strong>
+          . Your privacy is important to us. This Privacy Policy explains how we
+          collect, use and protect information when you visit or use our
+          website.The Personal Information that we collect is used for providing
+          and improving the Service. We will not use or share your information
+          with anyone except as described in this Privacy Policy.
         </p>
         <p>
           By using Mr Calculate, you agree to the practices described in this

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const SECTIONS = [
   {
     title: "1. Acceptance of Terms",
@@ -86,9 +87,13 @@ export default function TermsOfUse() {
         <p className="legal-date">Last Updated: November 4, 2026</p>
 
         <p>
-          Welcome to <strong>Mr Calculate</strong>. By accessing or using our
-          website, you agree to these Terms of Use. Please read them carefully
-          before using our website.
+          Welcome to{" "}
+          <strong>
+            {" "}
+            <Link to="/">mr-calculate.com</Link>
+          </strong>
+          . By accessing or using our website, you agree to these Terms of Use.
+          Please read them carefully before using our website.
         </p>
 
         {SECTIONS.map((s) => (

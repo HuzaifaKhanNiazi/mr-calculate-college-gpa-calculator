@@ -33,6 +33,46 @@ function SeoContent() {
   return (
     <main>
       <article className="content">
+        <section aria-labelledby="what-is">
+          <h2 id="what-is">What Is a College GPA Calculator?</h2>
+          <p>
+            A College GPA Calculator is an online tool that helps college and
+            university students calculate their Grade Point Average (GPA) based
+            on their course grades. GPA is a numerical representation of
+            academic performance, commonly calculated on a 4.0 scale in the
+            United States.
+          </p>
+          <p>
+            A <strong>College GPA Calculator with Credit Hours</strong>{" "}
+            considers both your grade points and the number of credit hours
+            assigned to each course. Courses with more credit hours generally
+            have a greater effect on your final GPA.
+          </p>
+
+          {/* <h3>Who Can Use a College GPA Calculator?</h3>
+          <ul>
+            <li>
+              <strong>College students:</strong> Calculate your GPA for a
+              semester or academic term.
+            </li>
+            <li>
+              <strong>University students:</strong> Check your academic
+              performance across multiple courses.
+            </li>
+            <li>
+              <strong>New students:</strong> Understand how grades and grade
+              points affect GPA.
+            </li>
+            <li>
+              <strong>Students planning their goals:</strong> Estimate the
+              grades needed to achieve a target GPA.
+            </li>
+            <li>
+              <strong>Students tracking progress:</strong> Compare semester
+              results and monitor academic improvement.
+            </li>
+          </ul> */}
+        </section>
         <section className="scale" aria-labelledby="scale-title">
           <h2 id="scale-title">
             Letter Grades and Numerical Equivalents Used in This Calculator
@@ -60,45 +100,6 @@ function SeoContent() {
             result. If your university gives A+ the same value as A, select A.
           </p>
         </section>
-        {/* <section aria-labelledby="what-is">
-        <h2 id="what-is">What Is a College GPA Calculator?</h2>
-        <p>
-          A College GPA Calculator is an online tool that helps college and
-          university students calculate their Grade Point Average (GPA) based on
-          their course grades. GPA is a numerical representation of academic
-          performance, commonly calculated on a 4.0 scale in the United States.
-        </p>
-        <p>
-          A <strong>College GPA Calculator with Credit Hours</strong> considers
-          both your grade points and the number of credit hours assigned to each
-          course. Courses with more credit hours generally have a greater effect
-          on your final GPA.
-        </p>
-
-        <h3>Who Can Use a College GPA Calculator?</h3>
-        <ul>
-          <li>
-            <strong>College students:</strong> Calculate your GPA for a semester
-            or academic term.
-          </li>
-          <li>
-            <strong>University students:</strong> Check your academic
-            performance across multiple courses.
-          </li>
-          <li>
-            <strong>New students:</strong> Understand how grades and grade
-            points affect GPA.
-          </li>
-          <li>
-            <strong>Students planning their goals:</strong> Estimate the grades
-            needed to achieve a target GPA.
-          </li>
-          <li>
-            <strong>Students tracking progress:</strong> Compare semester
-            results and monitor academic improvement.
-          </li>
-        </ul>
-      </section> */}
 
         <section aria-labelledby="how-to-use">
           <h2 id="how-to-use">How to Use the College GPA Calculator</h2>

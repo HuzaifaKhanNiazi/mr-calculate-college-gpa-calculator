@@ -15,7 +15,7 @@ const webApp = (name, path, description) => ({
 export const PAGES = [
   {
     path: "/",
-    title: "Mr Calculate | Free Online Calculators",
+    title: "Free Online Calculators | Mr Calculate",
     description:
       "Mr Calculate offers free online calculators, including a college GPA calculator,percentage calculator and many more. Fast, simple and accurate.",
     schema: [
@@ -35,9 +35,9 @@ export const PAGES = [
   },
   {
     path: "/college-gpa-calculator",
-    title: "College GPA Calculator | Mr Calculate",
+    title: "College GPA Calculator – Calculate GPA with Credit Hours",
     description:
-      "Free college gpa calculator. Enter your grades and credit hours to calculate your college gpa instantly on a 4.0 scale.",
+      "Use our free College GPA Calculator to calculate your college GPA easily. Enter your grades and credit hours to calculate your college gpa instantly on a 4.0 scale.",
     schema: [
       webApp(
         "College GPA Calculator",
@@ -69,6 +69,12 @@ export const PAGES = [
     title: "Terms of Use | Mr Calculate",
     description:
       "Read the Terms of Use for Mr Calculate, including website use, calculator accuracy, intellectual property and limitation of liability.",
+  },
+  {
+    path: "/contact-us",
+    title: "Contact Us | Mr Calculate",
+    description:
+      "Contact Mr Calculate by email with your questions, feedback or ideas for new calculators.",
   },
 ];
 

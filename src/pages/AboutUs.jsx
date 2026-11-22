@@ -2,16 +2,6 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function AboutPage() {
-  // useEffect(() => {
-  //   document.title = "About Us | Mr Calculate";
-  //   document
-  //     .querySelector('meta[name="description"]')
-  //     ?.setAttribute(
-  //       "content",
-  //       "Learn about Mr Calculate, a free collection of simple and accurate online calculators for students and everyday use.",
-  //     );
-  // }, []);
-
   return (
     <>
       <main className="page">
@@ -19,18 +9,22 @@ export default function AboutPage() {
           <h1>About Us</h1>
 
           <p>
-            Welcome to <strong>Mr Calculate</strong>, a free collection of
-            simple and accurate online calculators for students and everyday
-            use. Our goal is to help you get a clear answer quickly, without
-            complicated steps or manual calculations.
+            Welcome to{" "}
+            <strong>
+              {" "}
+              <Link to="/">mr-calculate.com</Link>
+            </strong>
+            , a free collection of simple and accurate online calculators for
+            students and everyday use. Our goal is to help you get a clear
+            answer quickly, without complicated steps or manual calculations.
           </p>
 
           <p>
             We started with a{" "}
-            <Link to="/gpa-calculator">College GPA Calculator</Link> that works
-            with letter grades and credit hours, and we are adding more tools
-            over time. Each calculator uses standard, commonly accepted formulas
-            and is designed to be easy to read on any device.
+            <Link to="/college-gpa-calculator">College GPA Calculator</Link>{" "}
+            that works with letter grades and credit hours, and we are adding
+            more tools over time. Each calculator uses standard, commonly
+            accepted formulas and is designed to be easy to read on any device.
           </p>
 
           <p>

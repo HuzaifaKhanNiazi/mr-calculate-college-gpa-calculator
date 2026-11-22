@@ -1,14 +1,8 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import useRouteSeo from "../useRouteSeo.js";
-const LogoMark = () => (
-  <span className="logo-mark" aria-hidden="true">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1 2v4h10V4H7zm1.5 6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm3.5 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm3.5 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM8.5 14a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm3.5 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm3.5 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" />
-    </svg>
-  </span>
-);
+import { LogoIcon } from "../components/Logo.jsx";
+
 export const Layout = () => {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
@@ -52,7 +46,7 @@ export const Layout = () => {
       <header className={hidden ? "site-header hide" : "site-header"}>
         <nav className="nav-inner" aria-label="Main navigation">
           <Link to="/" className="logo" aria-label="Mr-Calculate home">
-            <LogoMark />
+            <LogoIcon size={38} />
             Mr Calculate
           </Link>
 
@@ -72,6 +66,9 @@ export const Layout = () => {
             </NavLink>
             <NavLink to="/faqs" className="link">
               FAQS
+            </NavLink>
+            <NavLink to="/contact-us" className="link">
+              Contact Us
             </NavLink>
             <NavLink to="/about-us" className="link">
               About Us
@@ -93,7 +90,7 @@ export const Layout = () => {
           <div className="footer-top">
             <div className="footer-about">
               <Link to="/" className="logo">
-                <LogoMark />
+                <LogoIcon size={34} />
                 Mr Calculate
               </Link>
               <p>
@@ -133,6 +130,9 @@ export const Layout = () => {
                 </li>
                 <li>
                   <Link to="/faqs">FAQS</Link>
+                </li>
+                <li>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
                 <li>
                   <Link to="/about-us">About Us</Link>

@@ -88,4 +88,4 @@ fs.writeFileSync(
   path.join(dist, "robots.txt"),
   `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`,
 );
-console.log("sitemap.xml aur robots.txt ban gaye");
+console.log("sitemap.xml aur robots.txt are ready");

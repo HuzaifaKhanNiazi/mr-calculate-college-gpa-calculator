@@ -455,9 +455,9 @@ select {
   transform: translateY(-100%);
 }
 .nav-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  height: 68px;
+  height: 64px;
   padding: 0.7rem;
   display: flex;
   align-items: center;
@@ -469,24 +469,24 @@ select {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: #fff;
   text-decoration: none;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.03em;
 }
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #8cc8ff, #3d8fe0);
-  color: #12304f;
-  display: grid;
-  place-items: center;
+.logo svg {
+  display: block;
   flex-shrink: 0;
 }
 
+@media (max-width: 560px) {
+  .logo {
+    font-size: 1.2rem;
+    gap: 8px;
+  }
+}
 .menu {
   display: flex;
   align-items: center;

@@ -16,7 +16,7 @@ const GRADES = [
   { letter: "D", points: 1.0 },
   { letter: "F", points: 0.0 },
 ];
-const CREDITS = [1, 2, 3, 4, 5, 6];
+const CREDITS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const STORAGE_KEY = "mr-calculate-courses";
 
 let nextId = 100;
